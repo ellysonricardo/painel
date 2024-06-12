@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.ufrj.hucff.painel.modelo.Pubisher;
 
-public interface PubisherRepository extends JpaRepository<Pubisher, UUID> {
+public interface PublisherRepository extends JpaRepository<Pubisher, UUID> {
 
 }
