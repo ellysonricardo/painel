@@ -1,6 +1,7 @@
 package br.ufrj.hucff.painel.services;
 
-import java.util.stream.Collector;
+import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -25,6 +26,15 @@ public class BookService {
 		this.bookRepository = bookRepository;
 		this.authorRepository = authorRepository;
 		this.publisherRepository = pubisherRepository;
+	}
+	
+	public List<Book> getAllBooks(){
+		return bookRepository.findAll();
+	}
+	
+	@Transactional
+	public void deleteBook(UUID id) {
+		bookRepository.deleteById(id);
 	}
 	
 	@Transactional
